@@ -19,7 +19,7 @@
     },
     "policyRule": {
       "if": {
-        "field": "[concat('tags[', parameters('tagging-policy'), ']')]",
+        "field": "[concat('tags[', parameters('tagName'), ']')]",
         "exists": "false"
       },
       "then": {
