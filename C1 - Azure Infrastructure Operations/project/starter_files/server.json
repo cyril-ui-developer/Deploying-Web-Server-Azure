@@ -1,0 +1,31 @@
+{
+	"variables": {
+		"client_id": "384c781a-ebd5-4c51-a791-3ab6ba0a57a2",
+		"client_secret": "h37Ax5eZrLWMNBezU7hEFB5HWE.QHCmYS3",
+		"tenant_id": "a203934d-fab9-48db-ba3d-72971257db2d",
+		"subscription_id": "c738be40-8887-4aa4-9325-c710b3aba4b6"
+	},
+	"builders": [{
+
+		"managed_image_resource_group_name": "myResourceGroup",
+		"managed_image_name": "DeployWebServerPackerImage",
+
+		"os_type": "Linux",
+		"image_publisher": "Canonical",
+		"image_offer": "UbuntuServer",
+		"image_sku": "18.04-LTS",
+
+		"azure_tags": {
+			"dept": "Engineering",
+			"task": "Image deployment"
+		}
+	}],
+	"provisioners": [{
+		"inline": [
+			"echo 'Hello, World!' > index.html",
+			"nohup busybox httpd -f -p 80 &"
+		],
+		"inline_shebang": "/bin/sh -x",
+		"type": "shell "
+	}]
+}
