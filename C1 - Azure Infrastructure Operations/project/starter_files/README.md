@@ -36,5 +36,9 @@ For instructions on how to create and apply policy in Azure, click here: https:/
 
 
 ### Output
-**Your words here**
+Once Terraform completes, your VM infrastructure is ready. Obtain the public IP address of your VM with `az vm show`:
+`az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] -o tsv`
+Run `ssh <username>@<publicIps>`  to SSH  to  the VM
+
+
 
