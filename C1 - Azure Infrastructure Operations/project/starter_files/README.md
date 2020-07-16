@@ -17,7 +17,23 @@ For this project, you will write a Packer template and a Terraform template to d
 4. Install [Terraform](https://www.terraform.io/downloads.html)
 
 ### Instructions
-**Your words here**
+## Deploy a Policy
+1. Login to Azure portal to  create and apply Tagging Policy that ensures all indexed resources in your subscription have tags and deny deployment if they do not.
+2. Use `az policy assignment list` to verify the tag
+For instructions on how to create and apply policy in Azure, click here: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources
+
+## Build Packer Template
+1. Change directory to the cloned repository and locate the starter_files sub-directory
+2. Update the tag value in `server.json`
+3. Run `packer build server.json` to create a machine image. Note: This would take few minutes to build
+
+## Create the Infrastructure using Terraform Template
+1. Run `terraform init` to initialize  the Terraform environment
+2. Run `terraform  plan -out solution.plan` to review  and validate Terraform template
+   If everything looks correct and you're ready to build the infrastructure in Azure, apply the template in Terraform
+3. Run `terraform apply solution.plan` to scans the current directory for the configuration and applies the changes appropriately.
+
+
 
 ### Output
 **Your words here**
