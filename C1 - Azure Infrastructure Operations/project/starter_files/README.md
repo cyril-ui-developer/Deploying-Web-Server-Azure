@@ -40,5 +40,4 @@ Once Terraform completes, your VM infrastructure is ready. Obtain the public IP 
 `az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] -o tsv`
 Run `ssh <username>@<publicIps>`  to SSH  to  the VM
 
-
-
+![alt text](https://github.com/cyril-ui-developer/Deploying-Web-Server-Azure/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/output%20of%20terraform%20apply.png?raw=true)
