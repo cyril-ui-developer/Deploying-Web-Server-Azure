@@ -8,7 +8,7 @@
                 "subscription_id": "c738be40-8887-4aa4-9325-c710b3aba4b6",
 
 		"managed_image_resource_group_name": "myResourceGroup",
-		"managed_image_name": "DeployWebServerPackerImage",
+		"managed_image_name": "udacityNDDeployWebServerPackerImage",
 
 		"os_type": "Linux",
 		"image_publisher": "Canonical",
